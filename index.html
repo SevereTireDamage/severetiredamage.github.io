@@ -13,31 +13,25 @@ function sayAtMinute(x, time)
 {
 	sayAt(x, 60000*time);
 }
-sayAt("three", 1000);
-sayAt("two", 2000);
-sayAt("one", 3000);
-sayAt("start", 4000);
-sayAt("stop", 9000);
-sayAt("three minutes", 180000);
-sayAt("five minutes", 300000);
-/*
-sayAt("five", 5000);
-setTimeout(function(){
-	sayAtMinute("run one", 0);
-	sayAtMinute("walk one", 1);
-	sayAtMinute("run two ", 2);
-	sayAtMinute("walk one", 4);
-	sayAtMinute("run two", 5);
-	sayAtMinute("walk one", 7);
-	sayAtMinute("run one", 8);
-	sayAtMinute("walk one", 9);
-	sayAtMinute("and we're running", 10);
-	sayAtMinute("time 20", 20);
-	sayAtMinute("time 30", 30);
-	sayAtMinute("time 40", 40);
-},
-60000);
-*/
+function sayAtSecond(x, time)
+{
+	sayAt(x, 60000*time);
+}
+var afterS = 0;
+function sayAfterSeconds(text, sec)
+{
+	afterS += s;
+	sayAtSecond(text, afterS);
+}
+sayAfterSeconds("Power should be on, get ready", 1);
+sayAfterSeconds("Press up", 1);
+sayAfterSeconds("Press down", .5);
+sayAfterSeconds("Hold side", .5);
+sayAfterSeconds("Release side, press and hold side and down", 5);
+sayAfterSeconds("Release side", 10);
+sayAfterSeconds("Release down. DFU ready.",10);
+
+
 </script>
 <script>
 function say(x)
